@@ -67,11 +67,6 @@ function sanitizeForWeb($string) {
     return $string;
 }
 
-
-if (!isset($_SERVER) && isset($HTTP_SERVER_VARS)) {
-	$_SERVER = &$HTTP_SERVER_VARS;
-}
-
 foreach ($_REQUEST as $key=>$val){
 	switch ($key){
 		case 'event_data':
