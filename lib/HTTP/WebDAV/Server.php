@@ -111,10 +111,6 @@ class HTTP_WebDAV_Server
             $this->path = rtrim($this->path, '/');
         }
 
-        if (ini_get('magic_quotes_gpc')) {
-            $this->path = stripslashes($this->path);
-        }
-
         // set base uri
         if (empty($this->base_uri)) {
             $path_info = $this->_urldecode($_SERVER['PATH_INFO']);
