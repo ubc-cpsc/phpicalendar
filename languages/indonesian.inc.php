@@ -206,5 +206,3 @@ $lang['l_error_restrictedcal'] 	= 'Anda sedang berusaha mengakses sebuah kalende
 $lang['l_error_invalidcal'] 	= 'Berkas kalender invalid. Silakan coba sebuah kalender yang berbeda.';
 $lang['l_error_cantopen'] 		= 'Tidak dapat membuka kalender.';
 $lang['l_error_cache']			= 'Tidak dapat menulis ke direktori cache. Silakan periksa konfigurasi Anda.';
-
-?>

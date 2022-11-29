@@ -211,4 +211,3 @@ class _parse_proppatch
     }
 }
 
-?>

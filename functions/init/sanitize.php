@@ -134,4 +134,3 @@ foreach ($_COOKIE as $key=>$val){
 	}
 	$_COOKIE[$key] = $val;
 }
-?>

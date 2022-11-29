@@ -240,4 +240,3 @@ function logmsg($str){
 		fputs($logfile, $logline, strlen($logline) );
 	}
 }
-?>

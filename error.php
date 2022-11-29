@@ -57,4 +57,3 @@ function error($error_msg='There was an error processing the request.', $file='N
 
 }
 
-?>

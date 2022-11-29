@@ -293,4 +293,3 @@ function is_daylight($time, $timezone){
 	return $dlst;
 
 }
-?>

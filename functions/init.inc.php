@@ -192,4 +192,3 @@ $uid_list = array();
 #echo "cal_displaynames";print_r($cal_displaynames);
 #echo "</pre><hr>";
 
-?>

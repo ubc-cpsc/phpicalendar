@@ -92,4 +92,3 @@ while (!feof($ifile)) {
 }
 fclose($ifile);
 
-?>

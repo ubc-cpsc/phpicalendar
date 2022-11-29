@@ -75,4 +75,3 @@ function bite_str($string, $start, $len, $byte=3){
 	}
 	return $str;
 }
-?>

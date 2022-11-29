@@ -559,4 +559,3 @@ $template_started = getmicrotime();
 //print_r($cal_filelist);
 //print_r($tz_array);
 #print '</pre>';
-?>
