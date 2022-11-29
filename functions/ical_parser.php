@@ -131,12 +131,12 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 		while (!feof($ifile)) {
 			$line = $nextline;
 			$nextline = fgets($ifile, 1024);
-			$nextline = ereg_replace("[\r\n]", '', $nextline);
+			$nextline = preg_replace("/[\r\n]/", '', $nextline);
 			#handle continuation lines that start with either a space or a tab (MS Outlook)
 			while (isset($nextline{0}) && ($nextline{0} == ' ' || $nextline{0} == "\t")) {
 				$line = $line . substr($nextline, 1);
 				$nextline = fgets($ifile, 1024);
-				$nextline = ereg_replace("[\r\n]", '', $nextline);
+				$nextline = preg_replace("/[\r\n]/", '', $nextline);
 			}
 			$line = str_replace('\n', "\n", $line);
 			$line = str_replace('\t', "\t", $line);
@@ -261,7 +261,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 
 				default:
 					unset ($field, $data, $prop_pos, $property);
-					if (ereg ("([^:]+):(.*)", $line, $line)){
+					if (preg_match ("/([^:]+):(.*)/", $line, $line)){
 					$field = $line[1];
 					$data = $line[2];
 					$property = strtoupper($field);
@@ -327,7 +327,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 							break;
 
 						case 'EXDATE':
-							$data = split(',', $data);
+							$data = explode(',', $data);
 							foreach ($data as $exdata) {
 								$exdata = str_replace('T', '', $exdata);
 								$exdata = str_replace('Z', '', $exdata);
@@ -367,7 +367,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 						case 'RECURRENCE-ID':
 							$parts = explode(';', $field);
 							foreach($parts as $part) {
-								$eachval = split('=',$part);
+								$eachval = explode('=',$part);
 								if ($eachval[0] == 'RECURRENCE-ID') {
 									// do nothing
 								} elseif ($eachval[0] == 'TZID') {
@@ -384,11 +384,11 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 
 							$data = str_replace('T', '', $data);
 							$data = str_replace('Z', '', $data);
-							ereg ('([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{0,2})([0-9]{0,2})', $data, $regs);
+							preg_match ('/([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{0,2})([0-9]{0,2})/', $data, $regs);
 							$recurrence_id['date'] = $regs[1] . $regs[2] . $regs[3];
 							$recurrence_id['time'] = $regs[4] . $regs[5];
 
-							$recur_unixtime = mktime($regs[4], $regs[5], 0, $regs[2], $regs[3], $regs[1]);
+							$recur_unixtime = mktime(intval($regs[4]), intval($regs[5]), 0, intval($regs[2]), intval($regs[3]), intval($regs[1]));
 
 							if (isset($recurrence_id['tzid'])) {
 								$offset_tmp = chooseOffset($recur_unixtime, $recurrence_id['tzid']);
@@ -422,7 +422,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 							break;
 						case 'DURATION':
 							if (($first_duration == TRUE) && (!stristr($field, '=DURATION'))) {
-								ereg ('^P([0-9]{1,2}[W])?([0-9]{1,3}[D])?([T]{0,1})?([0-9]{1,2}[H])?([0-9]{1,2}[M])?([0-9]{1,2}[S])?', $data, $duration);
+								preg_match ('/^P([0-9]{1,2}[W])?([0-9]{1,3}[D])?([T]{0,1})?([0-9]{1,2}[H])?([0-9]{1,2}[M])?([0-9]{1,2}[S])?/', $data, $duration);
 								$weeks 			= str_replace('W', '', $duration[1]);
 								$days 			= str_replace('D', '', $duration[2]);
 								$hours 			= str_replace('H', '', $duration[4]);
@@ -434,9 +434,9 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 							break;
 						case 'RRULE':
 							$data = str_replace ('RRULE:', '', $data);
-							$rrule = split (';', $data);
+							$rrule = explode (';', $data);
 							foreach ($rrule as $recur) {
-								ereg ('(.*)=(.*)', $recur, $regs);
+								preg_match ('/(.*)=(.*)/', $recur, $regs);
 								$rrule_array[$regs[1]] = $regs[2];
 							}
 							break;

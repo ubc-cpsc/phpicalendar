@@ -31,8 +31,8 @@ $event['event_text']  = sanitizeForWeb(urldecode($event['event_text']));
 $event['description'] = sanitizeForWeb(urldecode($event['description']));
 $event['location']    = sanitizeForWeb(urldecode($event['location']));
 if (isset($event['description'])) {
-	$event['description'] = ereg_replace("(blocked)?([[:alpha:]]+://([^<>&[:space:]]|&amp;)+[[:alnum:]/])", '<a target="_new" href="\2">\2</a>', $event['description']);
-	$event['description'] = ereg_replace("(blocked)?(mailto:)?([[:alnum:]_.%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,4})", '<a href="mailto:\3">\3</a>', $event['description']);
+	$event['description'] = preg_replace("#(blocked)?([[:alpha:]]+://([^<>&[:space:]]|&amp;)+[[:alnum:]/])#", '<a target="_new" href="\2">\2</a>', $event['description']);
+	$event['description'] = preg_replace("#(blocked)?(mailto:)?([[:alnum:]_.%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,4})#", '<a href="mailto:\3">\3</a>', $event['description']);
 }
 
 if (isset($organizer) && is_array($organizer)) {
@@ -100,7 +100,7 @@ UID:$uid
 SUMMARY:".$event['event_text']."
 CATEGORIES:".$event['calname']."
 DTSTART;TZID=".$event['timezone'].":".date("Ymd\THis",$event['start_unixtime'])."
-DTEND;TZID=".$event['timezone'].":".date("Ymd\THis",$event['start_unixtime'])."
+DTEND;TZID=".$event['timezone'].":".date("Ymd\THis",$event['end_unixtime'])."
 CLASS:".$event['class']."
 ".$event['other']."
 SEQUENCE:1

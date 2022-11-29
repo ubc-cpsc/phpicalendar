@@ -1,3 +1,16 @@
+NB: This is a patched version of phpicalendar 2.4 made by Faster IT GmbH.
+
+The site phpicalendar.net seems to be down for ages.
+The original software can be obtained still at https://sourceforge.net/projects/phpicalendar/ .
+This version is hosted at https://git.faster-it.de/phpicalendar/ .
+
+THIS SOFTWARE HAS SERIOUS SECURITY ISSUES. ONLY RUN THIS IN YOUR INTRANET.
+OR WHEREEVER YOU TRUST EVERY USER. REALLY, WE ARE NOT JOKING.
+
+Read the above sentence again. Thanks. And no, we don't offer support on this.
+
+=== snip === Original README follows === snip ===
+
                  ______________________________________
                 |            PHP iCalendar             |
                 | http://www.phpicalendar.net/         |

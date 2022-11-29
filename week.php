@@ -31,7 +31,7 @@ $display_date 		= "$start_week - $end_week";
 $sidebar_date 		= localizeDate($dateFormat_week_list, $unix_time);
 
 // For the side months
-ereg ("([0-9]{4})([0-9]{2})([0-9]{2})", $getdate, $day_array2);
+preg_match ("/([0-9]{4})([0-9]{2})([0-9]{2})/", $getdate, $day_array2);
 $this_day 	= $day_array2[3]; 
 $this_month = $day_array2[2];
 $this_year 	= $day_array2[1];

@@ -26,7 +26,13 @@ if ($this_month == 12){
 	$end_month = 1;
 	$end_year++;
 }
-switch ($current_view){
+
+$current_view_time = $current_view;
+if($current_view_time == 'print'){
+	$current_view_time = 'year';
+}
+
+switch ($current_view_time){
 	case 'month':
 	case 'week':
 	case 'day':

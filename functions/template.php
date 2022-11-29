@@ -79,9 +79,12 @@ class Page {
 				$some_events = '';
 				foreach ($val as $cal_time => $new_val) {
 					foreach ($new_val as $new_key2 => $new_val2) {
-						if (isset($seen_events[$new_key2]) && isset($new_val2['spans_day']) && $new_val2['spans_day'] == 1){
-							$new_val2['event_text'] .= ' second instance of '.$new_key2;
+						if (isset($seen_events[$new_key2])) {
+                                        		// Include in list if we've already seen it AND
+							// (it spans more than one day OR it's a recurring event) 
+							if (($new_val2['spans_day'] != 1) && (!isset($new_val2['recur']))) {
 							continue;
+							}
 						}
 						$seen_events[$new_key2] = 1;
 						$day_events++;
@@ -90,8 +93,8 @@ class Page {
 							$location 		= sanitizeForWeb(stripslashes(urldecode($new_val2['location'])));
 							$description 	= sanitizeForWeb(stripslashes(urldecode($new_val2['description'])));
 							if (!empty($description)) {
-								$description = ereg_replace('(blocked)?([[:alpha:]]+://([^<>&[:space:]]|&amp;)+[[:alnum:]/])', '<a target="_new" href="\2">\2</a>', $description);
-								$description = ereg_replace('(blocked)?(mailto:)?([[:alnum:]_.%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,4})', '<a href="mailto:\3">\3</a>', $description);
+								$description = preg_replace('(blocked)?([[:alpha:]]+://([^<>&[:space:]]|&amp;)+[[:alnum:]/])', '<a target="_new" href="\2">\2</a>', $description);
+								$description = preg_replace('(blocked)?(mailto:)?([[:alnum:]_.%+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,4})', '<a href="mailto:\3">\3</a>', $description);
 							}
 
 							$event_start 	= $new_val2['event_start'];
@@ -392,7 +395,7 @@ class Page {
 			$key = mktime($regs_tmp[1],$regs_tmp[2],0,$this_month,$this_day,$this_year);
 			$key = date ($timeFormat, $key);
 
-			if (ereg('([0-9]{1,2}):00', $key)) {
+			if (preg_match('/([0-9]{1,2}):00/', $key)) {
 				$even_row = '2';
 				# column of times colspan = 4 to cover navigation links at top
 				$weekdisplay .= '<tr>';
@@ -405,7 +408,7 @@ class Page {
 				$weekdisplay .= '<td bgcolor="#a1a5a9" width="1" height="' . $phpiCal_config->gridLength . '"></td>';
 			} else {
 				$even_row = '';
-				if (ereg('([0-9]{1,2}):30', $key)) $even_row = '3';
+				if (preg_match('/([0-9]{1,2}):30/', $key)) $even_row = '3';
 				# empty row for each gridLength, to the right of times and left of first weekday
 				$weekdisplay .= '<tr>';
 				$weekdisplay .= '<td bgcolor="#a1a5a9" width="1" height="' . $phpiCal_config->gridLength . '"></td>';
@@ -1091,7 +1094,13 @@ HEREDOC;
 				#	$switch['START_DATE'] 	= localizeDate ($dateFormat_week_list, $u_start);
 					$start_date 	= localizeDate ($dateFormat_week_list, $u_start);
 					foreach ($event_times as $uid => $val) {
-						if (isset($seen_events[$uid]) && @$val['spans_day'] == 1) continue;
+						if (isset($seen_events[$uid])) {
+							// Include in list if we've already seen it AND
+							// (it spans more than one day OR it's a recurring event) 
+							if ((@$val['spans_day'] != 1) && (!isset($val['recur']))) {
+								continue;
+							}
+						}
 						$seen_events[$uid] = 1;
 						$switch['CAL'] 			= $cal;
 						$switch['START_DATE'] 	= $start_date;
@@ -1133,7 +1142,7 @@ HEREDOC;
 
 	}
 
-	function Page($file = 'std.tpl') {
+	function __construct($file = 'std.tpl') {
 		global $phpiCal_config;
 		if (!file_exists($file)){
 			#look for it in default if not found

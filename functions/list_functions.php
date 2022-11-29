@@ -2,7 +2,7 @@
 
 function list_jumps() {
 	global $phpiCal_config, $lang, $cal;
-	$calName = join(',', array_map("getCalendarName", split(',', $cal)));
+	$calName = join(',', array_map("getCalendarName", explode(',', $cal)));
 	$today = date('Ymd', time() + $phpiCal_config->second_offset);
 	$return = '<option value="#">'.$lang['l_jump'].'</option>';
 	$return .= '<option value="day.php?cal='.$calName.'&amp;getdate='.$today.'">'.$lang['l_goday'].'</option>';
@@ -77,7 +77,7 @@ function list_years() {
 
 function list_weeks() {
 	global $getdate, $this_year, $cal, $dateFormat_week_jump, $phpiCal_config;
-	ereg ("([0-9]{4})([0-9]{2})([0-9]{2})", $getdate, $day_array2);
+	preg_match ("/([0-9]{4})([0-9]{2})([0-9]{2})/", $getdate, $day_array2);
 	$this_day 			= $day_array2[3]; 
 	$this_month 		= $day_array2[2];
 	$this_year 			= $day_array2[1];

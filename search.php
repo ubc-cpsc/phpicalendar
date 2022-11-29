@@ -104,7 +104,7 @@ function format_search($search_str) {
 	$search_str = trim($search_str);
 	$search_str = str_replace(' and ', ' ', $search_str);
 	$search_str = str_replace(' - ', ' ', $search_str);
-	$search_str = ereg_replace('[[:space:]]+',' ', $search_str);
+	$search_str = preg_replace('[[:space:]]+',' ', $search_str);
 	$search_str = str_replace(' not ', ' -', $search_str);
 
 	// start out with an AND array of all the items
@@ -260,7 +260,7 @@ function format_recur($arr) {
 		if ($arr['BYMONTHDAY'][(count($arr['BYMONTHDAY']) - 1)] == '0') unset($arr['BYMONTHDAY'][$last]);
 		$last = count($arr['BYMONTHDAY']) - 1;
 		foreach ($arr['BYMONTHDAY'] as $key => $day) {
-			ereg('(-{0,1})([0-9]{1,2})',$day,$regs);
+			preg_match('/(-{0,1})([0-9]{1,2})/',$day,$regs);
 			list($junk,$sign,$day) = $regs;
 			if ($sign != '')	$list .= $sign;
 			if ($key == $last)	$list .= $day;
@@ -274,7 +274,7 @@ function format_recur($arr) {
 		$list = '';
 		$last = count($arr['BYDAY']) - 1;
 		foreach ($arr['BYDAY'] as $key => $day) {
-			ereg('([-\+]{0,1})([0-9]{0,1})([A-Z]{2})',$day,$regs);
+			preg_match('/([-\+]{0,1})([0-9]{0,1})([A-Z]{2})/',$day,$regs);
 			list($junk,$sign,$day_num,$day_txt) = $regs;
 			$num = two2threeCharDays($day_txt,false);
 			if ($sign != '')	$list .= $sign;

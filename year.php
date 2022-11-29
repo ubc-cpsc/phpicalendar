@@ -5,7 +5,7 @@ require_once(BASE.'functions/ical_parser.php');
 require_once(BASE.'functions/list_functions.php');
 require_once(BASE.'functions/template.php');
 
-ereg ("([0-9]{4})([0-9]{2})([0-9]{2})", $getdate, $day_array2);
+preg_match ("/([0-9]{4})([0-9]{2})([0-9]{2})/", $getdate, $day_array2);
 $this_day 	= $day_array2[3]; 
 $this_month = $day_array2[2];
 $this_year 	= $day_array2[1];
@@ -17,7 +17,7 @@ $prev_year 	= date ("Ymd", $prev_year);
 $sidebar_date 		= localizeDate($dateFormat_week_list, strtotime($getdate));
 
 // For the side months
-ereg ("([0-9]{4})([0-9]{2})([0-9]{2})", $getdate, $day_array2);
+preg_match ("/([0-9]{4})([0-9]{2})([0-9]{2})/", $getdate, $day_array2);
 $this_day 	= $day_array2[3]; 
 $this_month = $day_array2[2];
 $this_year 	= $day_array2[1];

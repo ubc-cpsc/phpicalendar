@@ -21,7 +21,7 @@
 							<tr>
 								<td align="center" valign="top" class="V12">
 									{ERROR_MSG}<br />
-									[<span class="G10"><a href="http://phpicalendar.net/documentation/index.php?title=Error_message_meanings">What does this mean?</a></span>]
+									[<span class="G10"><a href="https://git.faster-it.de/phpicalendardocumentation/index.php?title=Error_message_meanings">What does this mean?</a></span>]
 									<br />
 									<br />
 									{ERROR_CALENDAR}

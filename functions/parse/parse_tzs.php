@@ -12,12 +12,12 @@ $is_std = false;
 while (!feof($ifile)) {
 	$line = $nextline;
 	$nextline = fgets($ifile, 1024);
-	$nextline = ereg_replace("[\r\n]", '', $nextline);
+	$nextline = preg_replace("/[\r\n]/", '', $nextline);
 	#handle continuation lines that start with either a space or a tab (MS Outlook)
 	while (isset($nextline{0}) && ($nextline{0} == ' ' || $nextline{0} == "\t")) { 
 		$line = $line . substr($nextline, 1);
 		$nextline = fgets($ifile, 1024);
-		$nextline = ereg_replace("[\r\n]", '', $nextline);
+		$nextline = preg_replace("/[\r\n]/", '', $nextline);
 	}
 	$line = trim($line);	
 	switch ($line) {
@@ -56,7 +56,7 @@ while (!feof($ifile)) {
 			break;
 		default:
 			unset ($field, $data, $prop_pos, $property);
-			if (ereg ('([^:]+):(.*)', $line, $line)){
+			if (preg_match ('/([^:]+):(.*)/', $line, $line)){
 				$field = $line[1];
 				$data = $line[2];				
 				$property = strtoupper($field);

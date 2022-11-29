@@ -138,7 +138,7 @@ function expand_byday($time) {
 				[2] => 4 number
 				[3] => TH day abbr
 		*/
-		ereg ('([-\+]{0,1})?([0-9]+)?([A-Z]{2})', $day, $byday_arr);
+		preg_match ('/([-\+]{0,1})?([0-9]+)?([A-Z]{2})/', $day, $byday_arr);
 		$on_day = two2threeCharDays($byday_arr[3]);
 		switch ($freq_type) {
 			case 'week':
@@ -254,7 +254,7 @@ function restrict_byday($times, $freq = '') {
 				[2] => 4 number
 				[3] => TH day abbr
 		*/
-		ereg ('([-\+]{0,1})?([0-9]{1})?([A-Z]{2})', $day, $byday_arr);
+		preg_match ('/([-\+]{0,1})?([0-9]{1})?([A-Z]{2})/', $day, $byday_arr);
 		$byday3[] = two2threeCharDays($byday_arr[3]);
 	}
 	$new_times = array();

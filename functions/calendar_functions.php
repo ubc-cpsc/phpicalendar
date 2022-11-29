@@ -226,7 +226,7 @@ function display_ical_list($cals, $pick=FALSE) {
 			while (!feof($ifile)) {
 				$line = fgets($ifile, 1024);
 				$line = trim($line);
-				if (ereg ("([^:]+):(.*)", $line, $regs)){
+				if (preg_match ("/([^:]+):(.*)/", $line, $regs)){
 					$field = $regs[1];
 					$data = $regs[2];
 					$property = $field;

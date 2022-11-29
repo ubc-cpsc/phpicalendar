@@ -124,7 +124,7 @@ foreach ($rrule_array as $key => $val) {
 		case 'UNTIL':
 			# UNTIL must be in UTC
 			$until = date("YmdHis",strtotime($val)); 
-			ereg ('([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})', $until, $regs);
+			preg_match ('/([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/', $until, $regs);
 			$until_unixtime = mktime($regs[4],@$regs[5],@$regs[6],$regs[2],$regs[3],$regs[1]);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = localizeDate($dateFormat_week,$until);
 			break;
@@ -135,39 +135,39 @@ foreach ($rrule_array as $key => $val) {
 			}
 			break;
 		case 'BYSECOND':
-			$bysecond = split (',', $val);
+			$bysecond = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $bysecond;
 			break;
 		case 'BYMINUTE':
-			$byminute = split (',', $val);
+			$byminute = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $byminute;
 			break;
 		case 'BYHOUR':
-			$byhour = split (',', $val);
+			$byhour = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $byhour;
 			break;
 		case 'BYDAY':
-			$byday = split (',', $val);
+			$byday = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $byday;
 			break;
 		case 'BYMONTHDAY':
-			$bymonthday = split (',', $val);
+			$bymonthday = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $bymonthday;
 			break;					
 		case 'BYYEARDAY':
-			$byyearday = split (',', $val);
+			$byyearday = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $byyearday;
 			break;
 		case 'BYWEEKNO':
-			$byweekno = split (',', $val);
+			$byweekno = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $byweekno;
 			break;
 		case 'BYMONTH':
-			$bymonth = split (',', $val);
+			$bymonth = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $bymonth;
 			break;
 		case 'BYSETPOS':
-			$bysetpos = split (',', $val);
+			$bysetpos = explode (',', $val);
 			$recur_array[($start_date)][($hour.$minute)][$uid]['recur'][$key] = $bysetpos;
 			break;
 		case 'WKST':
