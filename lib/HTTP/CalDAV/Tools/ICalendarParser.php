@@ -151,7 +151,7 @@ class ICalendarParser
      * @param resource input stream handle
      * @access public
      */
-    function ICalendarParser($handle, $offsets=null, $value=null, $filters=null)
+    function __construct($handle, $offsets=null, $value=null, $filters=null)
     {
         $this->_handle = $handle;
         $this->_offsetStack[] = $offsets;

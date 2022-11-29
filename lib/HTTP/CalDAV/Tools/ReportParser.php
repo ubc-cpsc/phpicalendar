@@ -95,7 +95,7 @@ class ReportParser
      * @param string path to report input data
      * @access public
      */
-    function ReportParser($input)
+    function __construct($input)
     {
         // FIXME Take a handle, not a path
         $handle = fopen($input, 'r');

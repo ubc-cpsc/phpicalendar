@@ -56,7 +56,7 @@ class _parse_propfind
      *
      * @access public
      */
-    function _parse_propfind($input)
+    function __construct($input)
     {
         // success state flag
         $this->success = true;
