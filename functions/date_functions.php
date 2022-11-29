@@ -92,7 +92,7 @@ function resolve_path($url, $rel_path) {
 	);
 
 	$rel_path = str_replace('\\', '/', $rel_path);
-	if ($rel_path{0} == '/') {
+	if ($rel_path[0] == '/') {
 		// Absolute path
 		return $uri['proto'] . '://' . $auth . $uri['host'] . $uri['port'] . $rel_path;
 	}
