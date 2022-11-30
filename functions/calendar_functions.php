@@ -36,6 +36,7 @@ function availableCalendars($username, $password, $cal_filename, $admin = false)
 
 	// Create the list of available calendars.
 	$calendars = array();
+	$list_webcals = (array) $list_webcals;
 	
 	// This array keeps track of paths we need to search.
 	$search_paths = array($phpiCal_config->calendar_path);
@@ -111,6 +112,9 @@ function availableCalendars($username, $password, $cal_filename, $admin = false)
 			if (isset($http_user) && isset($apache_map[$http_user]) && !in_array($cal_name, $apache_map[$http_user])) continue;
 
 			// Make sure this calendar is not locked.
+			$locked_cals = (array) $locked_cals;
+			$unlocked_cals = (array) $unlocked_cals;
+
 			if (!$admin && in_array($cal_name, $locked_cals) && !in_array($cal_name, $unlocked_cals)) continue;
 			
 			// Add this calendar if we're looking for it, and remove it's name
