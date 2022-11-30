@@ -81,7 +81,7 @@ class Page {
 					foreach ($new_val as $new_key2 => $new_val2) {
 						if (isset($seen_events[$new_key2])) {
                                         		// Include in list if we've already seen it AND
-							// (it spans more than one day OR it's a recurring event) 
+							// (it spans more than one day OR it's a recurring event)
 							if (($new_val2['spans_day'] != 1) && (!isset($new_val2['recur']))) {
 							continue;
 							}
@@ -378,7 +378,7 @@ class Page {
 		$loop_hours = trim($match2[1]);
 		$loop_event = trim($match3[1]);
 
-		$event_length = array ();
+		$event_length = array();
 		$border = 0;
 		preg_match ('/([0-9]{4})([0-9]{2})([0-9]{2})/', $getdate, $day_array2);
 		$this_day = $day_array2[3];
@@ -445,7 +445,7 @@ class Page {
 						}
 						$j++;
 					}
-					if ($j == sizeof(@$event_length[$thisday])) {
+					if (empty($event_length[$thisday]) || $j == count($event_length[$thisday])) {
 						$event_length[$thisday][] = array ('length' => ($drawEvent['draw_length'] / $phpiCal_config->gridLength), 'key' => $eventKey, 'overlap' => $loopevent['event_overlap'],'state' => 'begin');
 					}
 				}
@@ -1096,7 +1096,7 @@ HEREDOC;
 					foreach ($event_times as $uid => $val) {
 						if (isset($seen_events[$uid])) {
 							// Include in list if we've already seen it AND
-							// (it spans more than one day OR it's a recurring event) 
+							// (it spans more than one day OR it's a recurring event)
 							if ((@$val['spans_day'] != 1) && (!isset($val['recur']))) {
 								continue;
 							}
