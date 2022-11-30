@@ -25,23 +25,23 @@ $lang['l_download'] 		= 'Preuzmi';
 $lang['l_powered_by'] 		= 'Pogon:';
 $lang['l_event'] 			= 'Dogadaj';
 $lang['l_event_start'] 		= 'Vrijeme pocetka';
-$lang['l_event_end'] 		= 'Vrijeme završetka';
+$lang['l_event_end'] 		= 'Vrijeme zavrï¿½etka';
 $lang['l_this_months'] 		= 'Dogadaji ovog mjeseca';
 $lang['l_date'] 			= 'Datum';
 $lang['l_summary'] 			= 'Suma';
 $lang['l_all_day'] 			= 'Cjelodnevni dogadaj';
-$lang['l_notes'] 			= 'Bilješke';
-$lang['l_this_years'] 		= 'Ovogodišnji dogadaj';
+$lang['l_notes'] 			= 'Biljeï¿½ke';
+$lang['l_this_years'] 		= 'Ovogodiï¿½nji dogadaj';
 $lang['l_today'] 			= 'Danas';
 $lang['l_this_week'] 		= 'Ovaj tjedan';
 $lang['l_this_month'] 		= 'Ovaj mjesec';
 $lang['l_jump'] 			= 'Skoci na';
-$lang['l_tomorrows'] 		= 'Sutrašnji dogadaji';
+$lang['l_tomorrows'] 		= 'Sutraï¿½nji dogadaji';
 $lang['l_goday'] 			= 'Idi na Danas';
 $lang['l_goweek'] 			= 'Idi na Ovaj tjedan';
 $lang['l_gomonth'] 			= 'Idi na Ovaj mjesec';
 $lang['l_goyear'] 			= 'Idi na Ovu godinu';
-$lang['l_search'] 			= 'Traži'; // the verb
+$lang['l_search'] 			= 'Traï¿½i'; // the verb
 $lang['l_results'] 			= 'Rezultati pretrage';
 $lang['l_pick_multiple'] 	= 'Odaberi skupinu';
 $lang['l_query'] 			= 'Upit'; // will be followed by the search query
@@ -64,15 +64,15 @@ $lang['l_exception']		= 'Iznimka';
 $lang['l_no_query']			= 'Upit nije dan';
 $lang['l_preferences']		= 'Postavke';
 $lang['l_printer']			= 'Pisac';
-$lang['l_select_lang']		= 'Odaberite Vaš standardni jezik';
-$lang['l_select_cal']		= 'Odaberite Vaš standardni kalendar';
-$lang['l_select_view']		= 'Odaberite Vaš standardni pogled';
-$lang['l_select_time']		= 'Odaberite Vaše standardno vrijeme';
-$lang['l_select_day']		= 'Odaberite Vaš standardni dan u tjednu';
-$lang['l_select_style']		= 'Odaberite Vaš standardni stil';
+$lang['l_select_lang']		= 'Odaberite Vaï¿½ standardni jezik';
+$lang['l_select_cal']		= 'Odaberite Vaï¿½ standardni kalendar';
+$lang['l_select_view']		= 'Odaberite Vaï¿½ standardni pogled';
+$lang['l_select_time']		= 'Odaberite Vaï¿½e standardno vrijeme';
+$lang['l_select_day']		= 'Odaberite Vaï¿½ standardni dan u tjednu';
+$lang['l_select_style']		= 'Odaberite Vaï¿½ standardni stil';
 $lang['l_set_prefs']		= 'Postavi postavke';
-$lang['l_completed_date']	= 'Završeno u';
-$lang['l_completed']		= 'Završeno';
+$lang['l_completed_date']	= 'Zavrï¿½eno u';
+$lang['l_completed']		= 'Zavrï¿½eno';
 $lang['l_created']			= 'Stvoreno';
 $lang['l_due']				= 'Due';
 $lang['l_priority']			= 'Prioritet';
@@ -81,14 +81,14 @@ $lang['l_priority_low']		= 'Nizak';
 $lang['l_priority_medium']	= 'Srednji';
 $lang['l_priority_none']	= 'Niti jedan';
 $lang['l_status']			= 'Status';
-$lang['l_status_confirmed'] = 'POTVRÐENO' ; 
-$lang['l_status_cancelled'] = 'OTKAZANO'; 
-$lang['l_status_tentative'] = 'TREBA SE POZABAVITI TIME'; 
+$lang['l_status_confirmed'] = 'POTVRï¿½ENO' ;
+$lang['l_status_cancelled'] = 'OTKAZANO';
+$lang['l_status_tentative'] = 'TREBA SE POZABAVITI TIME';
 $lang['l_todo']				= 'Stvari za raditi';
-$lang['l_unfinished']		= 'Nedovršeno';
-$lang['l_prefs_set'] 		= 'Vaše postavke su unešene.';
-$lang['l_prefs_unset'] 		= 'Postavke su poništene. Promjene ce se akutalizirati po ponovnom ucitavanju stranice.';
-$lang['l_unset_prefs'] 		= 'Poništi postavke';
+$lang['l_unfinished']		= 'Nedovrï¿½eno';
+$lang['l_prefs_set'] 		= 'Vaï¿½e postavke su uneï¿½ene.';
+$lang['l_prefs_unset'] 		= 'Postavke su poniï¿½tene. Promjene ce se akutalizirati po ponovnom ucitavanju stranice.';
+$lang['l_unset_prefs'] 		= 'Poniï¿½ti postavke';
 $lang['l_organizer']		= 'Organizator';
 $lang['l_attendee']			= 'Pohadatelj';
 $lang['l_location']			= 'Lokacija';
@@ -96,26 +96,26 @@ $lang['l_admin_header']		= 'PHP iCalendar Administracija';
 $lang['l_username']			= 'Korisnicko ime';
 $lang['l_password']			= 'Lozinka';
 $lang['l_login']			= 'Prijava';
-$lang['l_invalid_login']	= 'Pogrešno korisnicko ime ili lozinka.';
-$lang['l_addupdate_cal']	= 'Dodaj ili osvježi kalendar';
-$lang['l_addupdate_desc']	= 'Dodaj kalendar kroz upload datoteke. Osvježi kalendar uploadaom datoteke istog imena.';
-$lang['l_delete_cal']		= 'Obriši kalendar';
+$lang['l_invalid_login']	= 'Pogreï¿½no korisnicko ime ili lozinka.';
+$lang['l_addupdate_cal']	= 'Dodaj ili osvjeï¿½i kalendar';
+$lang['l_addupdate_desc']	= 'Dodaj kalendar kroz upload datoteke. Osvjeï¿½i kalendar uploadaom datoteke istog imena.';
+$lang['l_delete_cal']		= 'Obriï¿½i kalendar';
 $lang['l_logout']			= 'Odjava';
 $lang['l_cal_file']			= 'Datoteka kalendara';
-$lang['l_php_error']		= 'PHP greška';
-$upload_error_gen_lang		= 'Dogodio se problem sa Vašim uploadom.';
-$upload_error_lang[0]		= 'Dogodio se problem sa Vašim uploadom.';
-$upload_error_lang[1]		= 'Datoteka koju pokušavate poslati je pre velika.';
-$upload_error_lang[2]		= 'Datoteka koju pokušavate poslati je pre velika.';
-$upload_error_lang[3]		= 'Datoteka koju pokušavate poslati je smo djelomicno primljena.';
+$lang['l_php_error']		= 'PHP greï¿½ka';
+$upload_error_gen_lang		= 'Dogodio se problem sa Vaï¿½im uploadom.';
+$upload_error_lang[0]		= 'Dogodio se problem sa Vaï¿½im uploadom.';
+$upload_error_lang[1]		= 'Datoteka koju pokuï¿½avate poslati je pre velika.';
+$upload_error_lang[2]		= 'Datoteka koju pokuï¿½avate poslati je pre velika.';
+$upload_error_lang[3]		= 'Datoteka koju pokuï¿½avate poslati je smo djelomicno primljena.';
 $upload_error_lang[4]		= 'Morate odabrati datoeku za slanje.';
 $lang['l_upload_error_type'] = 'Samo .ics se mogu poslati.';
 $lang['l_copy_error']			= 'Ne mogu kopirati datoteku';
 $lang['l_delete_error']			= 'Ne mogu obrisati datoeku';
-$lang['l_delete_success']		= 'je uspješno obrisana.';
-$lang['l_action_success']		= 'Vaša aktivnost se uspješno izvršila.';
+$lang['l_delete_success']		= 'je uspjeï¿½no obrisana.';
+$lang['l_action_success']		= 'Vaï¿½a aktivnost se uspjeï¿½no izvrï¿½ila.';
 $lang['l_submit']				= 'Predaj';
-$lang['l_delete']				= 'Obriši';
+$lang['l_delete']				= 'Obriï¿½i';
 $all_cal_comb_lang			= 'Sve zajedno';
 
 // New for 2.0
@@ -162,8 +162,8 @@ $format_recur_lang['byday']			= 'Na dane: %list%';			// ie, 'On days: Mon, Tues,
 $daysofweek_lang			= array ('Nedjelja','Ponedjeljak','Utorak','Srijeda','Cetvrtak','Petak','Subota');
 $daysofweekshort_lang		= array ('Ned','Pon','Uto','Sri','Cet','Pet','Sub');
 $daysofweekreallyshort_lang	= array ('N','P','U','S','C','P','S');
-$monthsofyear_lang			= array ('Sijecanj','Veljaca','Ožujak','Travanj','Svibanj','Lipanj','Srpanj','Kolovoz','Rujan','Listopad','Studeni','Prosinac');
-$monthsofyearshort_lang		= array ('Sij','Velj','Ožu','Tra','Svi','Lip','Srp','Kol','Ruj','Lis','Stu','Pro');
+$monthsofyear_lang			= array ('Sijecanj','Veljaca','Oï¿½ujak','Travanj','Svibanj','Lipanj','Srpanj','Kolovoz','Rujan','Listopad','Studeni','Prosinac');
+$monthsofyearshort_lang		= array ('Sij','Velj','Oï¿½u','Tra','Svi','Lip','Srp','Kol','Ruj','Lis','Stu','Pro');
 
 // For time formatting, check out: http://www.php.net/manual/en/function.date.php
 $timeFormat = 'g:i A';
@@ -181,9 +181,9 @@ $dateFormat_year = '%Y';
 
 /*
 Notes about dateFormat_*
-	The pieces are similar to that of the PHP function strftime(), 
+	The pieces are similar to that of the PHP function strftime(),
 	however only the following is supported at this time:
-	
+
 	%A - the full week day name as specified in $daysofweek_lang
 	%a - the shortened week day name as specified in $daysofweekshort_lang
 	%B - the full month name as specified in $monthsofyear_lang
@@ -196,15 +196,14 @@ Notes about dateFormat_*
 */
 
 // Error messages - %s will be replaced with a variable
-$lang['l_error_title'] 			= 'Greška!';
-$lang['l_error_window'] 		= 'Dogodila se greška!';
-$lang['l_error_calendar'] 		= 'Kalendar "%s" se obradivao kad se ova greška dogodila.';
+$lang['l_error_title'] 			= 'Greï¿½ka!';
+$lang['l_error_window'] 		= 'Dogodila se greï¿½ka!';
+$lang['l_error_calendar'] 		= 'Kalendar "%s" se obradivao kad se ova greï¿½ka dogodila.';
 $lang['l_error_path'] 			= 'Ne mogu otvoriti putanju: "%s"';
 $lang['l_error_back'] 			= 'Molimo Vas koristite "Natrag" tipku za povratak.';
 $lang['l_error_remotecal'] 		= 'Ovaj server blokira udaljene kalendare koji nisu odobreni.';
-$lang['l_error_restrictedcal'] 	= 'Pokušali ste pristupiti kalendaru koji Vam nije dopušten.';
-$lang['l_error_invalidcal'] 	= 'Pogrešna kalendr datoteka. Pokušajte odabrati drugu.';
+$lang['l_error_restrictedcal'] 	= 'Pokuï¿½ali ste pristupiti kalendaru koji Vam nije dopuï¿½ten.';
+$lang['l_error_invalidcal'] 	= 'Pogreï¿½na kalendr datoteka. Pokuï¿½ajte odabrati drugu.';
 $lang['l_error_cantopen'] 		= 'Ne mogu otvoriti kalendar.';
 $lang['l_error_cache']			= 'Ne mogu pisati u cache direktorij. Molimo Vas provjerite konfiguraciju.';
 
-?>

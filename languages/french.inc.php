@@ -217,4 +217,3 @@ $lang['l_error_cantopen'] 		= 'Impossible d\'ouvrir le calendrier.';
 $lang['l_error_cache']			= 'Impossible d\'&eacute;crire dans le r&eacute;pertoire de cache. V&eacute;rifiez votre config. SVP.';
 $lang['l_prefs_off']			= 'Les pr&eacute;f&eacute;rences sont d&eacute;sactiv&eacute;es pour cette installation.';
 
-?>

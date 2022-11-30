@@ -207,4 +207,3 @@ $lang['l_error_invalidcal'] 	= 'Ugyldig kalenderfil. Pr&oslash;v en anenn kalend
 $lang['l_error_cantopen'] 		= 'Kunne ikke &aring;pne kalenderfila.';
 $lang['l_error_cache']			= 'Klarer ikke &aring; skrive til cache-mappen. Sjekk oppsettet p&aring; webstedet.';
 
-?>

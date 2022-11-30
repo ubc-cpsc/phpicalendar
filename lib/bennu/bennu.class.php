@@ -55,5 +55,3 @@ class Bennu {
         return $random;
     }
 }
-
-?>

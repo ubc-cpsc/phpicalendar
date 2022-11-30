@@ -205,4 +205,3 @@ $lang['l_error_invalidcal'] 	= 'Ongeldig kalenderbestand. Probeer een andere kal
 $lang['l_error_cantopen'] 		= 'Onmogelijk kalender te openen.';
 $lang['l_error_cache']			= 'Onmogelijk om naar cache directory te schrijven. Controleer uw configuratie.';
 
-?>

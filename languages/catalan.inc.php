@@ -81,9 +81,9 @@ $lang['l_priority_low']		= 'Baixa';
 $lang['l_priority_medium']	= 'Mitjana';
 $lang['l_priority_none']	= 'Cap';
 $lang['l_status']			= 'Estat';
-$lang['l_status_confirmed'] = 'CONFIRMED' ; 
-$lang['l_status_cancelled'] = 'CANCELLED'; 
-$lang['l_status_tentative'] = 'TENTATIVE'; 
+$lang['l_status_confirmed'] = 'CONFIRMED' ;
+$lang['l_status_cancelled'] = 'CANCELLED';
+$lang['l_status_tentative'] = 'TENTATIVE';
 $lang['l_todo']				= 'Pendent';
 $lang['l_unfinished']		= 'Sense acabar';
 $lang['l_prefs_set'] 		= 'Les teves prefer&egrave;ncies s\'han guardat.';
@@ -179,9 +179,9 @@ $dateFormat_year = '%Y';
 
 /*
 Notes about dateFormat_*
-	The pieces are similar to that of the PHP function strftime(), 
+	The pieces are similar to that of the PHP function strftime(),
 	however only the following is supported at this time:
-	
+
 	%A - the full week day name as specified in $daysofweek_lang
 	%a - the shortened week day name as specified in $daysofweekshort_lang
 	%B - the full month name as specified in $monthsofyear_lang
@@ -204,4 +204,3 @@ $lang['l_error_restrictedcal'] 	= 'Ha intentat arribar a un calendari que t&eacu
 $lang['l_error_invalidcal'] 	= 'Fitxer de calendari inv&agrave;lid. Per favor, provi un altre calendari.';
 
 
-?>

@@ -1289,4 +1289,3 @@ class iCalendar_property_class extends iCalendar_property {
 }
 */
 
-?>

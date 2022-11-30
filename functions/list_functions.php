@@ -124,4 +124,3 @@ function list_languages() {
 }
 
 
-?>

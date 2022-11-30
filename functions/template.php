@@ -1251,4 +1251,3 @@ HEREDOC;
 		print($this->page);
 	}
 }
-?>

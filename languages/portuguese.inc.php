@@ -81,9 +81,9 @@ $lang['l_priority_low']		= 'Baixa';
 $lang['l_priority_medium']	= 'M&eacute;dia';
 $lang['l_priority_none']	= 'Nenhuma';
 $lang['l_status']			= 'Status';
-$lang['l_status_confirmed'] = 'CONFIRMADO' ; 
-$lang['l_status_cancelled'] = 'CANCELADO'; 
-$lang['l_status_tentative'] = 'TENTATIVA'; 
+$lang['l_status_confirmed'] = 'CONFIRMADO' ;
+$lang['l_status_cancelled'] = 'CANCELADO';
+$lang['l_status_tentative'] = 'TENTATIVA';
 $lang['l_todo']				= 'Todo items';
 $lang['l_unfinished']		= 'N&atilde;o finalizado';
 $lang['l_prefs_set'] 		= 'Suas prefer&ecirc;ncias foram definidas.';
@@ -203,4 +203,3 @@ $lang['l_error_remotecal'] = 'Este servidor bloqueia calend&aacute;rios remotos 
 $lang['l_error_restrictedcal'] = 'Tentou acessar um calend&aacute;rio o qual &eacute; restrito o acesso neste servidor.';
 $lang['l_error_invalidcal'] = 'Arquivo de calend&aacute;rio inv&aacute;lido. Por favor tente usar outro calend&aacute;rio.';
 
-?>

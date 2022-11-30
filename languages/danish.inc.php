@@ -209,4 +209,3 @@ $lang['l_error_invalidcal'] 	= 'Kalenderen kan ikke l&aelig;ses. Pr&oslash;v en 
 $lang['l_error_cantopen'] 		= 'Kan ikke &aring;bne kalender.';
 $lang['l_error_cache']			= 'Kan ikek skrive til mellemlager-mappen. Check din konfiguration.';
 
-?>

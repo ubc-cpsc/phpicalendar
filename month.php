@@ -157,4 +157,3 @@ if ($phpiCal_config->this_months_events == 'yes') {
 $page->draw_subscribe($page);
 $page->output();
 
-?>

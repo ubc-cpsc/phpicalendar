@@ -277,4 +277,3 @@ class ReportParser
  * End:
  */
 
-?>

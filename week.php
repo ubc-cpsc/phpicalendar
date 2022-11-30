@@ -146,4 +146,3 @@ $page->draw_subscribe($page);
 
 $page->output();
 
-?>

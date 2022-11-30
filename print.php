@@ -103,4 +103,3 @@ $page->draw_print($page);
 
 $page->output();
 
-?>

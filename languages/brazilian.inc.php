@@ -3,7 +3,7 @@
 // Brazilian Portuguese language include
 // For version 1.0 PHP iCalendar
 //
-// Translation by Wilton, Bennet (suporte@bennetworks.com.br) 
+// Translation by Wilton, Bennet (suporte@bennetworks.com.br)
 // 01-nov-2002 02:42 PM
 // Submit new translations to chad@chadsdomain.com
 
@@ -81,9 +81,9 @@ $lang['l_priority_low']		= 'Low';
 $lang['l_priority_medium']	= 'Medium';
 $lang['l_priority_none']	= 'None';
 $lang['l_status']			= 'Status';
-$lang['l_status_confirmed'] = 'CONFIRMED' ; 
-$lang['l_status_cancelled'] = 'CANCELLED'; 
-$lang['l_status_tentative'] = 'TENTATIVE'; 
+$lang['l_status_confirmed'] = 'CONFIRMED' ;
+$lang['l_status_cancelled'] = 'CANCELLED';
+$lang['l_status_tentative'] = 'TENTATIVE';
 $lang['l_todo']				= 'To do items';
 $lang['l_unfinished']		= 'Unfinished';
 $lang['l_prefs_set'] 		= 'Your preferences have been set.';
@@ -159,9 +159,9 @@ $format_recur_lang['byday']			= 'On days: %list%';			// ie, 'On days: Mon, Tues,
 // ---------------------------------
 
 $daysofweek_lang                        = array ('Domingo','Segunda-Feira','Terca-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','S&aacute;bado');
-$daysofweekshort_lang                = array ('Dom','Seg','Ter','Qua','Qui','Sex','Sáb');
+$daysofweekshort_lang                = array ('Dom','Seg','Ter','Qua','Qui','Sex','Sï¿½b');
 $daysofweekreallyshort_lang        = array ('D','S','T','Q','Q','S','S');
-$monthsofyear_lang                        = array ('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro');
+$monthsofyear_lang                        = array ('Janeiro','Fevereiro','Marï¿½o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro');
 $monthsofyearshort_lang                = array ('Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez');
 
 // For time formatting, check out: http://www.php.net/manual/en/function.date.php
@@ -203,4 +203,3 @@ $lang['l_error_remotecal'] = 'Este servidor bloqueia calend&aacute;rios remotos 
 $lang['l_error_restrictedcal'] = 'Tentou acessar um calend&aacute;rio o qual &eacute; restrito o acesso neste servidor.';
 $lang['l_error_invalidcal'] = 'Arquivo de calend&aacute;rio inv&aacute;lido. Por favor tente usar outro calend&aacute;rio.';
 
-?>

@@ -73,4 +73,3 @@ function rss_noitems(){
 function rss_close(){
 	return "</channel>\n</rss>\n";
 }
-?>

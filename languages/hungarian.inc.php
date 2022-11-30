@@ -207,4 +207,3 @@ $lang['l_error_invalidcal'] 	= 'Érvénytelen naptárfájl! Kérem, válasszon e
 $lang['l_error_cantopen'] 	= 'Nem tudtam megnyitni a naptárt!';
 $lang['l_error_cache']		= 'Nem tudtam írni az átmeneti könyvtárba. Kérem, ellenőrizze a beállításokat!';
 
-?>

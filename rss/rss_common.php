@@ -229,4 +229,3 @@ header ("Content-Type: application/xml");
 
 echo "$rss";
 
-?>

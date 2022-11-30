@@ -57,7 +57,7 @@ $lang['l_no_events_month']	= 'Brak zadań na ten miesiąc.';
 $lang['l_rss_day_date']		= 'G:i A';  // Lists just the time
 $lang['l_rss_week_date	']	= '%A, %e %B';  // Lists just the day
 $lang['l_rss_month_date	']	= '%A, %e %B';  // Lists just the day
-$lang['l_rss_language']		= 'pl';		
+$lang['l_rss_language']		= 'pl';
 $lang['l_search_took']		= 'Szukanie zajęło %s sekund';
 $lang['l_recurring_event']	= 'Zadanie rekurencyjne';
 $lang['l_exception']		= 'Wyjątek';
@@ -81,9 +81,9 @@ $lang['l_priority_low']		= 'Niski';
 $lang['l_priority_medium']	= 'Średni';
 $lang['l_priority_none']	= 'Żaden';
 $lang['l_status']			= 'Status';
-$lang['l_status_confirmed'] = 'CONFIRMED' ; 
-$lang['l_status_cancelled'] = 'CANCELLED'; 
-$lang['l_status_tentative'] = 'TENTATIVE'; 
+$lang['l_status_confirmed'] = 'CONFIRMED' ;
+$lang['l_status_cancelled'] = 'CANCELLED';
+$lang['l_status_tentative'] = 'TENTATIVE';
 $lang['l_todo']				= 'Do zrobienia';
 $lang['l_unfinished']		= 'Niewykonane';
 $lang['l_prefs_set'] 		= 'Twoje preferencje zostały ustawione.';
@@ -182,9 +182,9 @@ $dateFormat_year = '%Y';
 
 /*
 Notes about $dateFormat_*
-	The pieces are similar to that of the PHP function strftime(), 
+	The pieces are similar to that of the PHP function strftime(),
 	however only the following is supported at this time:
-	
+
 	%A - the full week day name as specified in $daysofweek_lang
 	%a - the shortened week day name as specified in $daysofweekshort_lang
 	%B - the full month name as specified in $monthsofyear_lang
@@ -208,4 +208,3 @@ $lang['l_error_invalidcal']  	= 'Zły plik kalendarza. Spróbuj innego.';
 $lang['l_error_cantopen'] 		= 'Unable to open calendar.';
 $lang['l_error_cache']			= 'Unable to write to cache directory. Please check your config.';
 
-?>

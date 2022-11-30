@@ -177,9 +177,9 @@ $dateFormat_year = '%Y';
 
 /*
 Notes about dateFormat_*
-	The pieces are similar to that of the PHP function strftime(), 
+	The pieces are similar to that of the PHP function strftime(),
 	however only the following is supported at this time:
-	
+
 	%A - the full week day name as specified in $daysofweek_lang
 	%a - the shortened week day name as specified in $daysofweekshort_lang
 	%B - the full month name as specified in $monthsofyear_lang
@@ -201,4 +201,3 @@ $lang['l_error_remotecal'] = '本伺服器會擋掉未經審核的遠端行事�
 $lang['l_error_restrictedcal'] = '您試圖存取被本伺服器所限制使用的行事曆。';
 $lang['l_error_invalidcal'] = '錯誤的行事曆檔案。請換一個行事曆試試。';
 
-?>

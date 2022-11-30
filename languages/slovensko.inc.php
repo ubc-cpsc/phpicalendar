@@ -208,4 +208,3 @@ $lang['l_error_invalidcal'] 	= 'Naveljavna koledar datoteka. Poskusite drug kole
 $lang['l_error_cantopen'] 		= 'Ni mogoče odpreti koledarja.';
 $lang['l_error_cache']			= 'Ni mogoče pisati v mapo trenutneka pomnilnika. Preverite konfiguracijo.';
 
-?>

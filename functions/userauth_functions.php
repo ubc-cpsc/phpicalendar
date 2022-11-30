@@ -132,4 +132,3 @@ function user_logout() {
 	// Return empty username and password.
 	return array('', '');
 }
-?>

@@ -207,4 +207,3 @@ $lang['l_error_invalidcal'] 	= 'Vigane kalendri fail. Palun proovi teisi kalendr
 $lang['l_error_cantopen'] 		= 'Ei suutunud avada kalendrit.';
 $lang['l_error_cache']			= 'Ei suutnud kirjutada vahem&auml;lu kataloogi. Palun kontrolli konfiguratsiooni..';
 
-?>

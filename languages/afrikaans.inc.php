@@ -210,4 +210,3 @@ $lang['l_error_invalidcal'] 	= 'Ongeldige kalenderl&#234;er. Probeer asseblief \
 $lang['l_error_cantopen'] 		= 'Die kalender kon nie oopgemaak word nie.';
 $lang['l_error_cache']			= 'Daar kon nie na die wegsteekgids (\'cache\') geskryf word nie. Kontroleer asseblief u konfigurasie.';
 
-?>

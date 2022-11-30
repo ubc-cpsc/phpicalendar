@@ -39,4 +39,3 @@ Notes about dateFormat_*
 	us know. We will be happy to modify this if needed.
 */
 
-?>

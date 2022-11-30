@@ -205,4 +205,3 @@ $lang['l_error_invalidcal'] 		= 'Arquivo de calendario inv&aacute;lido. Por favo
 $lang['l_error_cantopen'] 		= 'Imposible abrir o calendario.';
 $lang['l_error_cache']			= 'Imposible escribir ao directorio da cach&eacute;. Por favor, revise a s&uacute;a configuraci&oacute;n.';
 
-?>

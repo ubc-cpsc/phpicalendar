@@ -206,4 +206,3 @@ $lang['l_error_remotecal'] 		= 'Dieser Server blockiert entfernte Kalender, welc
 $lang['l_error_restrictedcal'] 	= 'Sie haben versucht einen Kalender mit eingeschränktem Zugriff auf diesem Server aufzurufen.';
 $lang['l_error_invalidcal'] 	= 'Dieser Kalender enthält Fehler. Bitte wählen Sie einen anderen aus.';
 
-?>

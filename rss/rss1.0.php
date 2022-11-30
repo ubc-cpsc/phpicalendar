@@ -5,28 +5,28 @@ changed to use rss_common
 J. Hu 12/10/2008
 *********************************************************************************/
 
-   
+
 define('BASE', '../');
 require(BASE.'rss/rss_common.php');
 function rss_top(){
 	global $cal_displayname, $theview, $phpiCal_config, $cpath, $lang, $rss_link, $rss_language;
 	$rss = 	"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"."\n";
-	
+
 	/* Use 1.0 and strip encoding, use rss_language */
-	$rss .= 	'<rdf:RDF 
-		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	$rss .= 	'<rdf:RDF
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 		xmlns:ev="http://purl.org/rss/1.0/modules/event/"
 		xmlns:dc="http://purl.org/dc/elements/1.1/"
 		xmlns="http://purl.org/rss/1.0/">'."\n";
-	
+
 	$rss .= '<channel rdf:about="'.$phpiCal_config->default_path.'/rss/rss.php/';
 	if (isset($cpath) && $cpath !='') $rss_link.="?cpath=$cpath";
 	$rss .='">'."\n";
-	
+
 	$rss .= '<title>'.$cal_displayname;
-	if ($theview !=""){$rss .= ' - '.$theview;} 
+	if ($theview !=""){$rss .= ' - '.$theview;}
 	$rss .= "</title>\n";
-	
+
 	$rss .= '<link>'.htmlspecialchars("$phpiCal_config->default_path").'</link>'."\n";
 	$rss .= '<description>'.$cal_displayname.' '.$lang['l_calendar'].' - '.$theview.'</description>'."\n";
 	#$rss .= '<language>'.$rss_language.'</language>'."\n";
@@ -57,7 +57,7 @@ function rss_item(){
 		$location		= str_replace('&','&amp;',$val['location']);
 		$location		= str_replace('&amp;amp;','&amp;',$location);
 		$rss_item .= '<ev:location>'.$location."</ev:location>\n";
-	}	
+	}
 	$rss_item .= '</item>'."\n";
 	return $rss_item;
 }
@@ -73,4 +73,3 @@ function rss_noitems(){
 function rss_close(){
 	return "</rdf:RDF>\n";
 }
-?>

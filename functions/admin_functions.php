@@ -279,4 +279,3 @@ function is_uploaded_ics ($filename) {
 	}
 }
 
-?>

@@ -208,4 +208,3 @@ $lang['l_error_invalidcal'] 	= 'Documento calendario non corretto. Prova un altr
 $lang['l_error_cantopen'] 		= 'Unable to open calendar.';
 $lang['l_error_cache']			= 'Unable to write to cache directory. Please check your config.';
 
-?>

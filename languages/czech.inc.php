@@ -87,9 +87,9 @@ $lang['l_priority_low']		= 'Nízká';
 $lang['l_priority_medium']	= 'Střední';
 $lang['l_priority_none']	= 'Žádná';
 $lang['l_status']			= 'Stav';
-$lang['l_status_confirmed'] = 'POTVRZENO' ; 
-$lang['l_status_cancelled'] = 'ZRUŠENO'; 
-$lang['l_status_tentative'] = 'PŘEDBĚŽNÝ'; 
+$lang['l_status_confirmed'] = 'POTVRZENO' ;
+$lang['l_status_cancelled'] = 'ZRUŠENO';
+$lang['l_status_tentative'] = 'PŘEDBĚŽNÝ';
 $lang['l_todo']				= 'Zbývá udělat';
 $lang['l_unfinished']		= 'Nedokončeno';
 $lang['l_prefs_set'] 		= 'Vaše nastavení byla uložena.';
@@ -189,9 +189,9 @@ $dateFormat_year = '%Y';
 
 /*
 Notes about dateFormat_*
-	The pieces are similar to that of the PHP function strftime(), 
+	The pieces are similar to that of the PHP function strftime(),
 	however only the following is supported at this time:
-	
+
 	%A - the full week day name as specified in $daysofweek_lang
 	%a - the shortened week day name as specified in $daysofweekshort_lang
 	%B - the full month name as specified in $monthsofyear_lang
@@ -216,4 +216,3 @@ $lang['l_error_cantopen'] 		= 'Kalendář nelze otevřít.';
 $lang['l_error_cache']			= 'Nelze zapisovat do adresáře cache. Prosím, zkontrolujte konfigurační soubor.';
 $lang['l_prefs_off']			= 'Uživatelská nastavení jsou vypnutá.';
 
-?>

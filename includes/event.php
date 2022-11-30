@@ -137,4 +137,3 @@ $page->replace_tags(array(
 
 $page->output();
 
-?>

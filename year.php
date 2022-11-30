@@ -138,4 +138,3 @@ $page->get_vtodo($page);
 $page->draw_subscribe($page);	
 $page->output();
 
-?>

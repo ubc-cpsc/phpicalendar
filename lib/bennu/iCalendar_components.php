@@ -390,4 +390,3 @@ class iCalendar_timezone extends iCalendar_component {
 // REMINDER: DTEND must be later than DTSTART for all components which support both
 // REMINDER: DUE must be later than DTSTART for all components which support both
 
-?>

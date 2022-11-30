@@ -98,4 +98,3 @@ class Configs{
 
 $phpiCal_config = Configs::getInstance();
 
-?>

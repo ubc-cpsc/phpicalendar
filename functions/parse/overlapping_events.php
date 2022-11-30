@@ -267,4 +267,3 @@ function removeOverlap($ol_start_date, $ol_start_time, $ol_key) {
 		}
 	}
 }
-?>

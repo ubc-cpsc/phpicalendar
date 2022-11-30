@@ -262,4 +262,3 @@ class HTTP_CalDAV_Server_PHPiCalendar extends HTTP_CalDAV_Server {
 
 $server = new HTTP_CalDAV_Server_PHPiCalendar();
 $server->ServeRequest();
-?>

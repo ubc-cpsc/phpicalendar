@@ -206,4 +206,3 @@ $lang['l_error_invalidcal'] 	= '잘못된 파일입니다. 다른 달력으로 �
 $lang['l_error_cantopen'] 		= '달력을 열 수 없습니다.Unable to open calendar.';
 $lang['l_error_cache']			= '캐시디렉터리에 쓸 수 없습니다. 설정(config)을 확인하세요.';
 
-?>

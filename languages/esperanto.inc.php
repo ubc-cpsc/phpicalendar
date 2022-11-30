@@ -195,4 +195,3 @@ $lang['l_error_remotecal'] = 'Tiu &#265;i servilo blokas eksterajn kalendarojn k
 $lang['l_error_restrictedcal'] = 'Vi provis aliri kalendaron kiu estas limigita fare de tiu &#265; servilo.';
 $lang['l_error_invalidcal'] = 'Nevalida kalendardosiero. Bonvolu provi alian kalendaron.';
 
-?>

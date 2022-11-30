@@ -206,4 +206,3 @@ $lang['l_error_invalidcal'] 	= 'kalendoriaus failas. Pabandykite kitą.';
 $lang['l_error_cantopen'] 		= 'Nepavyko atidaryti kalendoriaus.';
 $lang['l_error_cache']			= 'Nepavyko rašyti į kešo katalogą. Pasitikrinkite konfigūraciją.';
 
-?>

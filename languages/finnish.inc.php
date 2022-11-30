@@ -210,4 +210,3 @@ $lang['l_error_remotecal'] 		= 'T&auml;m&auml; palvelin sallii vain hyv&auml;ksy
 $lang['l_error_restrictedcal'] 		= 'Yritit k&auml;ytt&auml;&auml; kalenteria, jonka k&auml;ytt&ouml; on rajoitettu.';
 $lang['l_error_invalidcal'] 		= 'Ei kelvollinen kalenterin nimi. Ole hyv&auml; ja yrit&auml; toista kalenteria.';
 
-?>

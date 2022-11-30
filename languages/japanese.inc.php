@@ -207,4 +207,3 @@ $lang['l_error_invalidcal'] 	= 'Invalid calendar file. Please try a different ca
 $lang['l_error_cantopen'] 		= 'Unable to open calendar.';
 $lang['l_error_cache']			= 'Unable to write to cache directory. Please check your config.';
 
-?>

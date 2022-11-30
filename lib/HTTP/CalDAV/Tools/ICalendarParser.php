@@ -304,4 +304,3 @@ class ICalendarParser
  * End:
  */
 
-?>

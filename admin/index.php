@@ -33,11 +33,11 @@ if ($phpiCal_config->auth_method == 'server') {
 	$is_loged_in = TRUE;
 } else {
 	$is_loged_in = FALSE;
-	
+
 	if (is_loggedin()) {
 		$is_loged_in = TRUE;
 	}
-	
+
 	if (isset($username) && @$_GET['action'] != 'logout') {
 		$is_loged_in = login ($username, $password);
 	}
@@ -59,13 +59,13 @@ if(is_loggedin()){
 			}
 		}
 	}
-	
+
 	// Add or Update a calendar
 	if (isset($_POST['action'])  && $_POST['action'] == 'addupdate') {
 		for ($filenumber = 1; $filenumber < 6; $filenumber++) {
 			$file = $_FILES['calfile'];
 			$addupdate_success = FALSE;
-	
+
 			if (!is_uploaded_file_v4($file['tmp_name'][$filenumber])) {
 				$upload_error = get_upload_error($file['error'][$filenumber]);
 			} elseif (!is_uploaded_ics($file['name'][$filenumber])) {
@@ -75,7 +75,7 @@ if(is_loggedin()){
 			} else {
 				$addupdate_success = TRUE;
 			}
-			
+
 			if ($addupdate_success == TRUE) {
 				$addupdate_msg = $addupdate_msg . '<font color="green">'.$lang['l_cal_file'].' #'.$filenumber.': '.$lang['l_action_success'].'</font><br />';
 			} else {
@@ -132,10 +132,9 @@ $page->replace_tags(array(
 	'l_addupdate_cal'	=> $lang['l_addupdate_cal'],
 	'l_addupdate_desc'	=> $lang['l_addupdate_desc'],
 	'l_powered_by'		=> $lang['l_powered_by'],
-	'l_this_site_is'	=> $lang['l_this_site_is']			
+	'l_this_site_is'	=> $lang['l_this_site_is']
 	));
 
 $page->draw_admin();
 $page->output();
 
-?>

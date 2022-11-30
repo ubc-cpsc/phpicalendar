@@ -782,4 +782,3 @@ function rfc2445_undo_value_formatting($value, $type) {
     return $value;
 }
 
-?>

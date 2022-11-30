@@ -356,4 +356,3 @@ $page->output();
 #echo "<pre>";
 #print_r($the_arr);
 #echo "</pre>";
-?>

@@ -2398,4 +2398,3 @@ class HTTP_WebDAV_Server
 // tab-width: 4
 // c-basic-offset: 4
 // End:
-?>

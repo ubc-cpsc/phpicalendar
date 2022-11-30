@@ -236,4 +236,3 @@ class iCalendar_parameter {
     }
 }
 
-?>

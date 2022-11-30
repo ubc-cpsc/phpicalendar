@@ -2,13 +2,13 @@
 
 /********************************************************************************
 *	Modified from phpicalendar 2.0a distribution by Jim Hu
-*	philosophical changes 
+*	philosophical changes
 *		- instead of having separate generators, use a date range for all views (done)
 *		- change the rss generation method to conform to standards(not done)
 *	PHP note: #@ is error control operator to suppress execution halt on error
 *		- used below to deal with undef?
 *
-*	using rssview, RSS feeds can be specified to return events for a given day, week, month, or year 
+*	using rssview, RSS feeds can be specified to return events for a given day, week, month, or year
 *	feeds can be specified for a number of days to or from a given date
 *	feeds can be specified for a range of dates
 *
@@ -17,10 +17,10 @@
 /* Modified from 2.21 by dyfrin 2006/03/08 19:09:28
    Changes:
    -RSS changed to 2.0, encoding removed, languages converted to ISO standard for feeds
-   -RSS title changed to be set by config.inc.php.  Make sure that is added to it. 
+   -RSS title changed to be set by config.inc.php.  Make sure that is added to it.
    Lines modified: 135-165, 208-223
 */
-   
+
 define('BASE', '../');
 require(BASE.'rss/rss_common.php');
 function rss_top(){
@@ -29,15 +29,15 @@ function rss_top(){
 	$rss = 	"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"."\n";
 	/* Use 2.0 and strip encoding, use rss_language */
 	$rss .= '<rss version="2.0"'."\n";
-	$rss .= 	'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+	$rss .= 	'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:ev="http://purl.org/rss/1.0/modules/event/" '.
 #	'xmlns:atom="http://www.w3.org/2005/Atom"'.
 	'xmlns:dc="http://purl.org/dc/elements/1.1/">'."\n";
 	$rss .= '<channel>'."\n";
 	$rss .= '<title>'.$cal_displayname;
-	if ($theview !=""){$rss .= ' - '.$theview;} 
+	if ($theview !=""){$rss .= ' - '.$theview;}
 	$rss .= "</title>\n";
-	
+
 	$rss .= '<link>'.$phpiCal_config->default_path.'/rss/rss2.0.php/';
 	if (isset($cpath) && $cpath !='') $rss_link.="?cpath=$cpath";
 	$rss .='</link>'."\n";
@@ -70,7 +70,7 @@ function rss_item(){
 		$location		= str_replace('&','&amp;',$val['location']);
 		$location		= str_replace('&amp;amp;','&amp;',$location);
 		$rss .= '<ev:location>'.$location."</ev:location>\n";
-	}	
+	}
 	$rss .= '</item>'."\n";
 	return $rss;
 }
@@ -81,7 +81,7 @@ function rss_noitems(){
 	$rss .= '<title>No events found</title>'."\n";
 	$rss .= '<link>'.htmlspecialchars ("$default_path").'</link>'."\n";
 	$rss .= '</item>'."\n";
-	return $rss;	
+	return $rss;
 }
 
 function rss_close(){
@@ -90,4 +90,3 @@ function rss_close(){
 #	"<atom:link href=\"$rss_link\" rel=\"self\" type=\"application/rss+xml\" />\n".
 	"</channel>\n</rss>\n";
 }
-?>

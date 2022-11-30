@@ -346,4 +346,3 @@ class HTTP_CalDAV_Server extends HTTP_WebDAV_Server
  * End:
  */
 
-?>
