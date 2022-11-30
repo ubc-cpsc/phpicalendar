@@ -877,7 +877,7 @@ document.todo_popup_data[$todo_popup_data_index] = todoData;
 
 HEREDOC;
 
-						$todo .= '<a class="psf" title="' . @$title . '" href="#" onclick="openTodoInfo(' . $todo_popup_data_index . '); return false;">';
+						$todo .= '<a class="psf" href="#" onclick="openTodoInfo(' . $todo_popup_data_index . '); return false;">';
 						$todo_popup_data_index++;
 						$vtodo_array = $todo;
 
@@ -921,9 +921,11 @@ HEREDOC;
 		}
 	}
 
-	function draw_month($template_p, $offset = '+0', $type) {
+	function draw_month($template_p, $offset, $type) {
 		global $phpiCal_config, $getdate, $master_array, $this_year, $this_month, $dateFormat_month, $cal, $minical_view, $month_event_lines, $daysofweekreallyshort_lang, $daysofweekshort_lang, $daysofweek_lang, $timeFormat_small, $timeFormat;
-
+        if (!$offset) {
+            $offset = '+0';
+        }
 		$unique_colors = $phpiCal_config->unique_colors;
 		preg_match('!<\!-- loop weekday on -->(.*)<\!-- loop weekday off -->!Uis', $template_p, $match1);
 		preg_match('!<\!-- loop monthdays on -->(.*)<\!-- loop monthdays off -->!Uis', $template_p, $match2);
@@ -1041,7 +1043,7 @@ HEREDOC;
 			#echo "<pre>";print_r($switch);echo "</pre>";
 
 			foreach ($switch as $tag => $data) {
-				$temp = str_replace('{'.$tag.'}', $data, $temp);
+				$temp = str_replace('{'.$tag.'}', (string) $data, $temp);
 			}
 			$middle .= $temp;
 
@@ -1181,7 +1183,7 @@ HEREDOC;
 				}
 
 				// This replaces any tags
-				$this->page = str_replace('{' . strtoupper($tag) . '}', $data, $this->page);
+				$this->page = str_replace('{' . strtoupper($tag) . '}', (string) $data, $this->page);
 			}
 
 		else
