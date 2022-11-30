@@ -129,6 +129,10 @@ if ($phpiCal_config->allow_login == 'yes') {
 	'l_logout'			=> $lang['l_logout']
 	));
 }
+else {
+    $page->replace_tags(array('l_logout' => ''));
+}
+
 if ($phpiCal_config->show_search != 'yes') {
 	$page->nosearch($page);
 }
