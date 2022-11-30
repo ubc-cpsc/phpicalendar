@@ -62,8 +62,8 @@ if (isset($attendee) && is_array($attendee)) {
 	$attendee = implode(', ',$attendees);
 }
 if (isset($event['location'])) $event['location'] = stripslashes($event['location']);
-if (sizeof($attendee) == 0) $attendee = '';
-if (sizeof($organizer) == 0) $organizer = '';
+if (empty($attendee)) $attendee = '';
+if (empty($organizer)) $organizer = '';
 if ($event['url'] != '') $event['url'] = '<a href="'.$event['url'].'" target="_blank">'.$event['url'].'</a>';
 
 switch ($event['status']){

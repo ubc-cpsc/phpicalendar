@@ -161,7 +161,7 @@ do {
 	$thisdate=date('Ymd', $thistime);
 	#	echo "Date: $thisdate\ti:$i\tnumdays:$numdays<br>\n";
 	$dayofweek = localizeDate ("%a %b %e %Y", strtotime($thisdate));
-	if (isset($master_array[($thisdate)]) && sizeof($master_array[($thisdate)]) > 0) {
+	if (!empty($master_array[($thisdate)])) {
 		foreach ($master_array[("$thisdate")] as $event_times) {
 			foreach ($event_times as $uid=>$val) {
 				#handle multiday all day events

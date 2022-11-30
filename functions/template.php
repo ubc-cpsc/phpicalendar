@@ -429,7 +429,7 @@ class Page {
 					}
 				} else {
 					# events that start in internal cal_times the grid
-					if (isset($master_array[$thisday][$cal_time]) && sizeof($master_array[$thisday][$cal_time]) > 0) {
+					if (!empty($master_array[$thisday][$cal_time])) {
 						$this_time_arr = $master_array[$thisday][$cal_time];
 					}
 				}
@@ -654,7 +654,7 @@ class Page {
 			}
 
 			// check for eventstart
-			if (isset($this_time_arr) && sizeof($this_time_arr) > 0) {
+			if (!empty($this_time_arr)) {
 				foreach ($this_time_arr as $eventKey => $loopevent) {
 					$drawEvent = drawEventTimes ($cal_time, $loopevent['display_end']);
 					$j = 0;
@@ -703,7 +703,7 @@ class Page {
 					break;
 			}
 
-			if (sizeof($event_length) == 0) {
+			if (empty($event_length)) {
 				$daydisplay .= '<td colspan="' . $nbrGridCols . '"' . $class . '>&nbsp;</td>' . "\n";
 
 			} else {
@@ -803,7 +803,7 @@ class Page {
 		$return_adtmp	= '';
 		$return_etmp	= '';
 
-		if (isset($master_array[$next_day]) && is_array($master_array[$next_day]) && sizeof($master_array[$next_day]) > 0) {
+		if (!empty($master_array[$next_day]) && is_array($master_array[$next_day])) {
 			foreach ($master_array[$next_day] as $cal_time => $event_times) {
 				foreach ($event_times as $uid => $val) {
 					$event_text = sanitizeForWeb(stripslashes(urldecode($val['event_text'])));
@@ -1172,7 +1172,7 @@ HEREDOC;
 	}
 
 	function replace_tags($tags = array()) {
-		if (sizeof($tags) > 0)
+		if (!empty($tags))
 			foreach ($tags as $tag => $data) {
 
 				// This removes any unfilled tags
@@ -1189,7 +1189,7 @@ HEREDOC;
 		}
 
 	function replace_files($tags = array()) {
-		if (sizeof($tags) > 0)
+		if (!empty($tags))
 			foreach ($tags as $tag => $data) {
 
 				// This opens up another template and parses it as well.
@@ -1213,7 +1213,7 @@ HEREDOC;
 
 		// Looks for {MONTH} before sending page out
 		preg_match_all ('!\{MONTH_([A-Z]*)\|?([+|-])([0-9]{1,2})\}!Uis', $this->page, $match);
-		if (sizeof($match) > 0) {
+		if (!empty($match)) {
 			$i=0;
 			foreach ($match[1] as $key => $val) {
 				if ($match[1][$i] == 'SMALL') {

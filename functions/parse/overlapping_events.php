@@ -229,7 +229,7 @@ function checkOverlap($event_date, $event_time, $uid) {
 function removeOverlap($ol_start_date, $ol_start_time, $ol_key) {
 	global $master_array, $overlap_array;
 	if (isset($overlap_array[$ol_start_date])) {
-		if (sizeof($overlap_array[$ol_start_date]) > 0) {
+		if (!empty($overlap_array[$ol_start_date])) {
 			$ol_end_time = $master_array[$ol_start_date][$ol_start_time][$ol_key]['event_end'];
 			foreach ($overlap_array[$ol_start_date] as $block_key => $block) {
 				if (in_array(array('time' => $ol_start_time, 'key' => $ol_key), $block['events'])) {

@@ -177,9 +177,9 @@ function search_boolean($needle_arr, $haystack) {
 	$not_arr = $needle_arr[3];
 
 	if (!$needle_arr[0]) return false;
-	if ((sizeof($and_arr) == 0) &&
-		(sizeof($or_arr) == 0) &&
-		(sizeof($not_arr) == 0)) return false;
+	if ((empty($and_arr)) &&
+		(empty($or_arr)) &&
+		(empty($not_arr))) return false;
 
 	// compare lowercase versions of the strings
 	$haystack = strtolower($haystack);
