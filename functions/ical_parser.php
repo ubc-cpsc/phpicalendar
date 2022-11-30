@@ -389,7 +389,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 							$recurrence_id['time'] = $regs[4] . $regs[5];
 
 							$recur_unixtime = mktime(intval($regs[4]), intval($regs[5]), 0, intval($regs[2]), intval($regs[3]), intval($regs[1]));
-
+                            $server_offset_tmp = chooseOffset($recur_unixtime, $phpiCal_config->timezone);
 							if (isset($recurrence_id['tzid'])) {
 								$offset_tmp = chooseOffset($recur_unixtime, $recurrence_id['tzid']);
 							} elseif (isset($calendar_tz)) {
@@ -397,7 +397,7 @@ foreach ($cal_filelist as $cal_key=>$filename) {
 							} else {
 								$offset_tmp = chooseOffset($recur_unixtime);
 							}
-							$recur_unixtime = calcTime($offset_tmp, @$server_offset_tmp, $recur_unixtime);
+							$recur_unixtime = calcTime($offset_tmp, $server_offset_tmp, $recur_unixtime);
 							$recurrence_id['date'] = date('Ymd', $recur_unixtime);
 							$recurrence_id['time'] = date('Hi', $recur_unixtime);
 							$recurrence_d = date('Ymd', $recur_unixtime);

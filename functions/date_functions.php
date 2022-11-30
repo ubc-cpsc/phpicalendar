@@ -212,6 +212,10 @@ function localizeDate($format, $timestamp) {
 }
 // calcOffset takes an offset (ie, -0500) and returns it in the number of seconds
 function calcOffset($offset_str) {
+    // Invalid offset provided.
+    if (strlen((string) $offset_str) < 5) {
+        return 0;
+    }
 	$sign = substr($offset_str, 0, 1);
 	$hours = substr($offset_str, 1, 2);
 	$mins = substr($offset_str, 3, 2);
