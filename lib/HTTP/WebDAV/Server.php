@@ -2374,7 +2374,7 @@ class HTTP_WebDAV_Server
         case 'iso-8859-15':
         case 'latin-1':
         default:
-            return utf8_encode($text);
+            return mb_convert_encoding($text, 'UTF-8', 'ISO-8859-1');
         }
     }
 
