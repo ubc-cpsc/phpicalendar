@@ -18,7 +18,7 @@ class Bennu {
         if($t === NULL) {
             $t = time();
         }
-        return gmstrftime('%Y%m%dT%H%M%SZ', $t);
+        return date('Ymd\THis\Z', $t);
     }
 
     function generate_guid() {
