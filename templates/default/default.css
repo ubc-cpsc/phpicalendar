@@ -52,7 +52,7 @@ table, td {font: 11px Verdana, Arial, sans-serif; color: #000;}
 .title h1     { font-family: Helvetica, sans-serif; font-size: 18px; color: #000; margin: 0px;}
 
 /* Main class used for all page wrapper tables */
-.maintable    { width: 990px; }
+.maintable    { width: 100%; }
 
 /* Week view */
 .weektoday    { background-color: #dff; }
